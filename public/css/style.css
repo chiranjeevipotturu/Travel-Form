@@ -1,0 +1,19 @@
+.tabs {
+ background-color:transparent;
+}
+
+.formBody{
+ top: 150px;
+    background: rgba(0,0,0,.4);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 7px 4px 3px #000000;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: #fff;
+  background-color: #00b2ee;
+  border-color: #00b2ee;
+}

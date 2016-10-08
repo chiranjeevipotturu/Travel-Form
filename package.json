@@ -1,14 +1,31 @@
 {
   "name": "travelform",
   "version": "1.0.0",
-  "description": "Book ticket anywhere",
+  "description": "Book ticket anywhere in the world",
   "main": "index.js",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.3"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ChiranjeeviPotturu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiranjeevipotturu/Travel-Form.git"
+  },
+  "keywords": [
+    "\"plane\"",
+    "\"Travel\"",
+    "\"",
+    "Journey\""
+  ],
+  "author": "Chiranjeevi Potturu",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.14.0"
-  }
+  "bugs": {
+    "url": "https://github.com/chiranjeevipotturu/Travel-Form/issues"
+  },
+  "homepage": "https://github.com/chiranjeevipotturu/Travel-Form#readme"
 }
