@@ -1,38 +1,127 @@
 <div>
+	<div class="col-sm-5 carousel-caption form-body ">
+		<form name="form" role="form" class="form-horizontal contract-form">
+			<div>
+				<h3>Journey Details</h3>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">From:</label>
+				<div class="col-sm-7">
+					<select class="form-control" ng-model="user.travel.from" required >
+						<option>Bangalore</option>
+						<option>Chennai</option>
+						<option>Delhi</option>
+						<option>Hyderabad</option>
+						<option>Kolkata</option>
+						<option>Mumbai</option>
+						<option>pune</option>
+					</select>
+				</div>
+
+			</div><br>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label">To:</label>
+				<div class="col-sm-7">
+					<select class="form-control" ng-model="user.travel.to" required>
+						<option>Bangalore</option>
+						<option>Chennai</option>
+						<option>Delhi</option>
+						<option>Hyderabad</option>
+						<option>Kolkata</option>
+						<option>Mumbai</option>
+						<option>pune</option>
+					</select>
+				</div>
+
+			</div><br>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Departure Date:</label>
+				<div class="col-sm-7">
+					<p class="input-group">
+						<input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="user.travel.departureDate" is-open="popup1.opened" datepicker-options="dateOptions1" close-text="Close" alt-input-formats="altInputFormats" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+					</p>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Return Date:</label>
+				<div class="col-sm-7">
+					<p class="input-group">
+						<input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="user.travel.returnDate" is-open="popup2.opened" datepicker-options="dateOptions" close-text="Close" alt-input-formats="altInputFormats" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+					</p>
+				</div>
+				<!-- <div class="col-sm-4"></div> -->
+			</div>
+
+			<div class="row">
+				<div class="col-xs-3"></div>
+				<div class="col-xs-6 pull-right">
+					<input type="submit" value="Next" class="btn btn-warning" ui-sref="step2({user: user})" />
+				</div>
+				<div class="col-xs-1"></div>
+			</div><br>
+		</form>
+	</div>
+</div>
+
+
+
+
+
+<!--
+<div>
 	<form name="form" role="form" class="form-horizontal ">
 	    <div class="form-group">
-	      <label class="col-sm-4 control-label">First Name:</label>
-	      <div class="col-sm-6">
+	    <div class="col-sm-4"></div>
+	      &lt;!&ndash; <label class="col-xs-3 control-label">First Name:</label> &ndash;&gt;
+	      <div class="col-sm-4">
 	        <input type="text" id="fullName" class="form-control contact-name-input" ng-model="modelcm.name" maxlength="20"  placeholder="First name"/>
 	      </div>
+	      <div class="col-sm-4"></div>
 	    </div>
 	    
 	    <div class="form-group">
-	      <label class="col-sm-4 control-label">Last Name:</label>
-	      <div class="col-sm-6">
+	      <div class="col-sm-4"></div>
+	      &lt;!&ndash; <label class="col-xs-4 control-label">Last Name:</label> &ndash;&gt;
+	      <div class="col-sm-4">
 	        <input type="text" id="fullName" class="form-control contact-name-input" ng-model="modelcm.name" maxlength="20"  placeholder="Last name"/>
 	      </div>
+	      <div class="col-sm-4"></div>
 	    </div>
 
 	    <div class="form-group">
-	      <label class="col-sm-4 control-label">Email address:</label>
-	      <div class="col-sm-6">
+	   	 <div class="col-sm-4"></div>
+	      &lt;!&ndash; <label class="col-xs-4 control-label">Email address:</label> &ndash;&gt;
+	      <div class="col-sm-4">
 	        <input name="email" type="email" class="form-control contact-tel-input" ng-model="modelcm.email" maxlength="40" placeholder="Email address" required=""/>
 	      </div>
+	      <div class="col-sm-4"></div>
 	    </div>
 
 	    <div class="form-group">
-	      <label class="col-sm-4 control-label">Phone Number:</label>
-	      <div class="col-sm-6">
+	    <div class="col-sm-4"></div>
+	      &lt;!&ndash; <label class="col-xs-4 control-label">Phone Number:</label> &ndash;&gt;
+	      <div class="col-sm-4">
 	         <input type="number" required maxlength="13" class="form-control contact-tel-input"  ng-model="modelcm.mobile" placeholder="Telephone number"/>
 	      </div>
+	      <div class="col-sm-4"></div>
 	    </div>
 
-	    <div class="row">
-	        <div class="col-xs-8"></div>
-	        <div class="col-xs-3">
+	    <div class="form-group">
+	        <div class="col-sm-4"></div>
+	        <div class="col-sm-4" align='right'>
 	          <input type="submit" value="Next" class="btn btn-warning" ng-click=""/>
 	        </div>
+	        <div class="col-sm-4"></div>
 	    </div><br>
 	</form>
-</div>
+</div>-->
+{{ user}}

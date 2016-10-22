@@ -1,3 +1,67 @@
+
+uSER: {{ user }}
+
+
+<div class="row col-sm-12">
+
+	<div class="col-sm-5 carousel-caption form-body ">
+
+		<div class="row">
+			<h3>Customer Information</h3>
+		</div>
+		<div class="row">
+			<form name="form" role="form" class="form-horizontal" >
+				<div class="form-group">
+					<div class="col-sm-2"></div>
+					<!-- <label class="col-xs-3 control-label">First Name:</label> -->
+					<div class="col-sm-8">
+						<input type="text" class="form-control contact-name-input" ng-model="user.details.fname" maxlength="20"  placeholder="First name" ng-required="true"/>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<input type="text" class="form-control contact-name-input" ng-model="user.details.lname" maxlength="20"  placeholder="Last name" required="true"/>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<input name="email" type="email" class="form-control contact-tel-input" ng-model="user.details.email" maxlength="40" placeholder="Email address" required=""/>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<input type="number" required maxlength="13" class="form-control contact-tel-input"  ng-model="user.details.mobile" placeholder="Telephone number"/>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-6"></div>
+					<div class="col-sm-4" align='right'>
+						<input type="submit" value="Next" class="btn btn-warning" ui-sref="step3"/>
+					</div>
+					<div class="col-sm-2"></div>
+				</div><br>
+			</form>
+		</div>
+	</div>
+	<!--<div class="col-sm-7"></div>-->
+</div>
+
+
+<!--
 <div>
 	<form name="form" role="form" class="form-horizontal contract-form">
 	    <div class="form-group">
@@ -38,4 +102,4 @@
 	        </div>
 	    </div><br>
 	</form>
-</div>
+</div>-->

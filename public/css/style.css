@@ -1,19 +1,44 @@
 .tabs {
- background-color:transparent;
+    background-color:transparent;
 }
 
-.formBody{
- top: 150px;
+.form-body{
+    /*top: 150px;*/
+    /*margin-bottom: 500px;*/
+    display: inherit;
     background: rgba(0,0,0,.4);
-    padding: 10px;
+    padding: 0px;
+    margin-top: 60px;
     border-radius: 10px;
     box-shadow: 7px 4px 3px #000000;
+    position: relative;
 }
 
 .btn:hover,
 .btn:focus,
 .btn:active {
-  color: #fff;
-  background-color: #00b2ee;
-  border-color: #00b2ee;
+    color: #fff;
+    background-color: #00b2ee;
+    border-color: #00b2ee;
+}
+
+.carousel-indicators, .carousel-control{
+    display: none;
+}
+
+body{
+    background-image: url('../images/background_img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    padding: 5px 0px 5px 0px;
+}
+
+.xyz{
+    background-color: #a9dba9;
 }

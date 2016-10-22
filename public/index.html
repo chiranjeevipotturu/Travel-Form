@@ -1,77 +1,305 @@
-<!-- <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="components/angular-bootstrap/ui-bootstrap-csp.css">
-	</head>
-	<body ng-app="travelform">
-		<h1>Travel Form </h1>
-
-		<script src="components/angular/angular.min.js"></script>
-		<script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
-		<script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-
-		<script src="app.js" type="text/javascript"></script>
-
-	</body>
-</html> -->
-
 <!DOCTYPE html>
-<html ng-app="travelform">
+<html ng-app="myApp">
 <head>
- <title>TravelForm</title>
- <script src="components/angular/angular.min.js"></script>
- <!-- <script src="components/jquery/dist/jquery.min.js"></script> -->
- <link href="components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" type="text/css">
- <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="components/angular/angular.min.js"></script>
-<script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-<script src="app.js" type="text/javascript"></script>
+    <title>TravelForm</title>
+    <script src="components/angular/angular.min.js"></script>
+    <!-- <script src="components/jquery/dist/jquery.min.js"></script> -->
+    <link href="components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
-<body >
-
-<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
- <div class="container">
-  <div class="navbar-heder">
-   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-   </button>
-    <!-- <a href="" class="navbar-brand"><img src="assets/plane.png" id="logoImg"></a> -->
-  </div>
-  <div class="collapse navbar-collapse navbar-right nav" id="navbar-collapse">
-   <ul class="nav navbar-nav navList">
-    <li><a href="#feedback">Feedback</a>
-    <li><a href="#contact">ContactUs</a>
-   </ul>
-  </div>
- </div>
-</nav>
-<hr>
-<div ng-controller="CarouselDemoCtrl"> 
-  <div uib-carousel active="active" interval="myInterval">
-   <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-    <img ng-src="{{slide.image}}" class="img-responsive">
-    <div class="carousel-caption formBody">
-     
-     <uib-tabset class="tabs" active="activeJustified" justified="true" >
-         <uib-tab index="0" heading="STEP1"><br>
-          <dir ng-include="'templates/step1.html'"></dir>       
-         </uib-tab>
-         <uib-tab index="1" heading="STEP2"><br>
-          <dir ng-include="'templates/step2.html'"></dir>
-         </uib-tab>
-         <uib-tab index="2" heading="STEP3">Long Labeled Justified content</uib-tab>
-        </uib-tabset>
-     
+<body ng-controller="CarouselDemoCtrl">
+<div class="row xyz">
+    <div class="col-sm-8">
+        <img class="img" src="../images/travel-logo.png">
     </div>
-   </div>
-  </div>
- 
+    <div class="col-sm-4 pull-rightt">
+        <h3>Book online or call us - 9985733306</h3>
+    </div>
 </div>
- 
+
+<nav class="navbar navbar-inverse" id="my-navbar">
+    <div class="container">
+        <div class="navbar-heder">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
+            <ul class="nav navbar-nav navList">
+                <li><a href="#home">Home</a>
+                <li><a href="#printTicket">Print Ticket</a>
+                <li><a href="#cancelTicket">Cancel Ticket</a>
+                <li><a href="#cancledServices">Canceled Services</a>
+                <li><a href="#galary">Galary</a>
+                <li><a href="#feedback">Feedback</a>
+                <li><a href="#contact">ContactUs</a>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div uib-carousel active="active" interval="myInterval">
+    <!--<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+
+        <img ng-src="{{slide.image}}" class="img-responsive">-->
+        <div ui-view="step1"></div>
+        <div ui-view="printTicket"></div>
+
+    </div>
+</div>
+
+<!--<div class="row col-sm-12">
+
+       <div class="col-sm-5 carousel-caption form-body ">
+
+        <div class="row">
+            <h3>Customer Information</h3>
+        </div>
+        <div class="row">
+            <form name="form" role="form" class="form-horizontal" >
+                <div class="form-group">
+                    <div class="col-sm-2"></div>
+                    &lt;!&ndash; <label class="col-xs-3 control-label">First Name:</label> &ndash;&gt;
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control contact-name-input" ng-model="user.details.fname" maxlength="20"  placeholder="First name" ng-required="true"/>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control contact-name-input" ng-model="user.details.lname" maxlength="20"  placeholder="Last name" required="true"/>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <input name="email" type="email" class="form-control contact-tel-input" ng-model="user.details.email" maxlength="40" placeholder="Email address" required=""/>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <input type="number" required maxlength="13" class="form-control contact-tel-input"  ng-model="user.details.mobile" placeholder="Telephone number"/>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-4" align='right'>
+                        <input type="submit" value="Next" class="btn btn-warning" ui-sref="step2" ng-click="next(1)"/>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div><br>
+            </form>
+        </div>
+    </div>
+&lt;!&ndash;<div class="col-sm-7"></div>&ndash;&gt;
+</div>
 
 
+&lt;!&ndash;<uib-tab>&ndash;&gt;
+    <div>
+        <div class="col-sm-5 carousel-caption form-body ">
+            <div class="row">
+                <h3>Travel Information</h3>
+            </div>
+            <form name="form" role="form" class="form-horizontal contract-form">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">From:</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" ng-model="user.travel.from" ></select>
+                    </div>
+
+                </div><br>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">To:</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" ng-model="user.travel.to" ></select>
+                    </div>
+
+                </div><br>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Departure Date:</label>
+                    <div class="col-sm-7">
+                        <p class="input-group">
+                            <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="user.travel.departureDate" is-open="popup1.opened" datepicker-options="dateOptions1" close-text="Close" alt-input-formats="altInputFormats" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Return Date:</label>
+                    <div class="col-sm-7">
+                        <p class="input-group">
+                            <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="user.travel.returnDate" is-open="popup2.opened" datepicker-options="dateOptions" close-text="Close" alt-input-formats="altInputFormats" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                    </div>
+                    &lt;!&ndash; <div class="col-sm-4"></div> &ndash;&gt;
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-6 pull-right">
+                        <input type="submit" value="Next" class="btn btn-warning" ng-click="next(2)"/>
+                    </div>
+                    <div class="col-xs-1"></div>
+                </div><br>
+            </form>
+        </div>
+    </div>-->
+<!--</uib-tab>-->
+
+
+
+
+<div>
+    <!--  <uib-tabset class="tabs" active="active" justified="true">
+         <uib-tab index="0" heading="Person Details">
+
+  --        &lt;!&ndash; <div ui-view="step1"></div>									    	 &ndash;&gt;
+             <div>
+                 <form name="form" role="form" class="form-horizontal" >
+                     <div class="form-group">
+                         <div class="col-sm-4"></div>
+                         &lt;!&ndash; <label class="col-xs-3 control-label">First Name:</label> &ndash;&gt;
+                         <div class="col-sm-4">
+                             <input type="text" class="form-control contact-name-input" ng-model="user.details.fname" maxlength="20"  placeholder="First name" ng-required="true"/>
+                         </div>
+                         <div class="col-sm-4"></div>
+                     </div>
+
+                     <div class="form-group">
+                         <div class="col-sm-4"></div>
+                         &lt;!&ndash; <label class="col-xs-4 control-label">Last Name:</label> &ndash;&gt;
+                         <div class="col-sm-4">
+                             <input type="text" class="form-control contact-name-input" ng-model="user.details.lname" maxlength="20"  placeholder="Last name" required="true"/>
+                         </div>
+                         <div class="col-sm-4"></div>
+                     </div>
+
+                     <div class="form-group">
+                         <div class="col-sm-4"></div>
+                         &lt;!&ndash; <label class="col-xs-4 control-label">Email address:</label> &ndash;&gt;
+                         <div class="col-sm-4">
+                             <input name="email" type="email" class="form-control contact-tel-input" ng-model="user.details.email" maxlength="40" placeholder="Email address" required=""/>
+                         </div>
+                         <div class="col-sm-4"></div>
+                     </div>
+
+                     <div class="form-group">
+                         <div class="col-sm-4"></div>
+                         &lt;!&ndash; <label class="col-xs-4 control-label">Phone Number:</label> &ndash;&gt;
+                         <div class="col-sm-4">
+                             <input type="number" required maxlength="13" class="form-control contact-tel-input"  ng-model="user.details.mobile" placeholder="Telephone number"/>
+                         </div>
+                         <div class="col-sm-4"></div>
+                     </div>
+
+                     <div class="form-group">
+                         <div class="col-sm-4"></div>
+                         <div class="col-sm-4" align='right'>
+                             <input type="submit" value="Next" class="btn btn-warning" ui-sref="step2" ng-click="next(1)"/>
+                         </div>
+                         <div class="col-sm-4"></div>
+                     </div><br>
+                 </form>
+             </div>
+         </uib-tab>
+         <uib-tab index="1" heading="Route Plane">
+
+             &lt;!&ndash; <div ui-view="step2"></div>			 &ndash;&gt;
+             <div>
+                 <form name="form" role="form" class="form-horizontal contract-form">
+                     <div class="form-group">
+                         <label class="col-sm-4 control-label">From:</label>
+                         <div class="col-sm-4">
+                             <select class="form-control" ng-model="user.travel.from" ></select>
+                         </div>
+
+                     </div><br>
+
+                     <div class="form-group">
+                         <label class="col-sm-4 control-label">To:</label>
+                         <div class="col-sm-4">
+                             <select class="form-control" ng-model="user.travel.to" ></select>
+                         </div>
+
+                     </div><br>
+
+                     <div class="form-group">
+                         <label class="col-sm-4 control-label">Departure Date:</label>
+                         <div class="col-sm-4">
+                             <p class="input-group">
+                                 <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="user.travel.departureDate" is-open="popup1.opened" datepicker-options="dateOptions1" close-text="Close" alt-input-formats="altInputFormats" />
+                                   <span class="input-group-btn">
+                                         <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                   </span>
+                             </p>
+                         </div>
+
+                     </div>
+
+                     <div class="form-group">
+                         <label class="col-sm-4 control-label">Return Date:</label>
+                         <div class="col-sm-4">
+                             <p class="input-group">
+                                 <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="user.travel.returnDate" is-open="popup2.opened" datepicker-options="dateOptions" close-text="Close" alt-input-formats="altInputFormats" />
+               <span class="input-group-btn">
+                 <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+               </span>
+                             </p>
+                         </div>
+                         &lt;!&ndash; <div class="col-sm-4"></div> &ndash;&gt;
+                     </div>
+
+                     <div class="row">
+                         <div class="col-xs-8"></div>
+                         <div class="col-xs-4">
+                             <input type="submit" value="Next" class="btn btn-warning" ng-click="next(2)"/>
+                         </div>
+                     </div><br>
+                 </form>
+             </div>
+         </uib-tab>
+         <uib-tab index="2" heading="Conformation">
+             {{ user.details.fname + ' ' + user.details.lname + ' ' + (user.details.mobile) }} will depart for {{ user.travel.from }} on {{ user.travel.departureDate }} and return on {{ user.travel.returnDate }}
+
+             <button class="btn btn-primary" ng-click="onSubmit(user)">Submit</button>
+         </uib-tab>
+     </uib-tabset>-->
+</div>
+<!--<footer>
+    <p>&copy; 2016 Company, Inc. &middot;</p>
+    <a href="mailto:yeshwanthdornala@gmail.com">Mail to</a>
+</footer>-->
+
+<script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/tabController.js"></script>
+<script src="js/step-two-controller.js"></script>
+<script src="js/step-three-controller.js"></script>
 </body>
 </html>

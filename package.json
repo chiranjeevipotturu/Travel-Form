@@ -4,9 +4,14 @@
   "description": "Book ticket anywhere in the world",
   "main": "index.js",
   "dependencies": {
-    "bower": "^1.7.9",
+    "body-parser": "^1.15.2",
+    "emailjs": "^1.0.8",
     "express": "^4.14.0",
-    "mongoose": "^4.6.3"
+    "mongoose": "^4.6.3",
+    "nodemailer": "^2.6.4",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "nodemailer-smtp-transport": "^2.7.2",
+    "xoauth2": "^1.2.0"
   },
   "devDependencies": {},
   "scripts": {
