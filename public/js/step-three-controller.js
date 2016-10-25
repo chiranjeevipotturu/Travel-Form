@@ -5,10 +5,7 @@ angular.module('myApp')
 
             $http.post('/sendmail', user)
                 .then(function(res){
-                    console.log('res', res);
-
                 }, function(err){
-                    console.log('err', err);
                 });
         };
     });

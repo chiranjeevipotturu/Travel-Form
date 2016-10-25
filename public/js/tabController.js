@@ -8,49 +8,6 @@ angular.module('myApp')
      $rootScope.user = {};
      $rootScope.user.details = {};
      $rootScope.user.travel = {};
-        console.log('ctrl loaded...');
-
-      /*  var slides = $scope.slides = [];
-        var currIndex = 0;
-
-        $scope.addSlide = function(i) {
-            var newWidth = 1300 + slides.length + 1;
-            i+=1;
-            slides.push({
-                image: 'images/img' + i + '.jpg',
-                id: currIndex++
-            });
-        };
-
-        $scope.randomize = function() {
-            var indexes = generateIndexesArray();
-            assignNewIndexesToSlides(indexes);
-        };
-
-        for (var i = 0; i < 4; i++) {
-            $scope.addSlide(i);
-        }
-
-        // Randomize logic below
-
-        function assignNewIndexesToSlides(indexes) {
-            for (var i = 0, l = slides.length; i < l; i++) {
-                slides[i].id = indexes.pop();
-            }
-        }
-
-        function generateIndexesArray() {
-            var indexes = [];
-            for (var i = 0; i < currIndex; ++i) {
-                indexes[i] = i;
-            }
-            return shuffle(indexes);
-        }
-
-        $scope.next = function(index){
-            $scope.active = index;
-            console.log('active', $scope.user);
-        };*/
 
         $scope.today = function() {
             $scope.boardingDt = $scope.returnDt = new Date();

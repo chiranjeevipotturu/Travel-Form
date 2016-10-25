@@ -1,7 +1,3 @@
-
-uSER: {{ user }}
-
-
 <div class="row col-sm-12">
 
 	<div class="col-sm-5 carousel-caption form-body ">
@@ -13,7 +9,6 @@ uSER: {{ user }}
 			<form name="form" role="form" class="form-horizontal" >
 				<div class="form-group">
 					<div class="col-sm-2"></div>
-					<!-- <label class="col-xs-3 control-label">First Name:</label> -->
 					<div class="col-sm-8">
 						<input type="text" class="form-control contact-name-input" ng-model="user.details.fname" maxlength="20"  placeholder="First name" ng-required="true"/>
 					</div>
@@ -57,49 +52,4 @@ uSER: {{ user }}
 			</form>
 		</div>
 	</div>
-	<!--<div class="col-sm-7"></div>-->
 </div>
-
-
-<!--
-<div>
-	<form name="form" role="form" class="form-horizontal contract-form">
-	    <div class="form-group">
-	      <label class="col-sm-4 control-label">Location:</label>
-	      <div class="col-sm-5">
-	        <select class="form-control" ng-model="placement.selected" ></select>
-	      </div>
-	    </div><br>
-	    
-	    <div class="form-group">
-	      <label class="col-sm-4 control-label">Date Dispatch:</label>
-	      <div class="col-sm-5">
-	       	<p class="input-group">
-	          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-	          <span class="input-group-btn">
-	            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
-	          </span>
-       		</p>
-	      </div>
-	    </div>
-
-	    <div class="form-group">
-	      <label class="col-sm-4 control-label">Date Return:</label>
-	      <div class="col-sm-5">
-	        <p class="input-group">
-	          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-	          <span class="input-group-btn">
-	            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
-	          </span>
-       		</p>
-	      </div>
-	    </div>
-
-	    <div class="row">
-	        <div class="col-xs-8"></div>
-	        <div class="col-xs-4">
-	          <input type="submit" value="Next" class="btn btn-warning" ng-click=""/>
-	        </div>
-	    </div><br>
-	</form>
-</div>-->

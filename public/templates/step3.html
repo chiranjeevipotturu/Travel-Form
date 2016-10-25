@@ -3,11 +3,10 @@
         <div class="row">
             <h3>Travel Information</h3>
         </div>
-<!--         <uib-tab index="2" heading="Conformation"> -->
-            {{ user.details.fname + ' ' + user.details.lname + ' ' + (user.details.mobile) }} will depart for {{ user.travel.from }} on {{ user.travel.departureDate }} and return on {{ user.travel.returnDate }}
+            {{ user.details.fname + ' ' + user.details.lname + ' ' +
+        '' + (user.details.mobile) }} will depart for {{ user.travel.from }} on
+        {{ user.travel.departureDate }} and return on {{ user.travel.returnDate }}
 
             <button class="btn btn-primary" ng-click="onSubmit(user)">Submit</button>
-        <!-- </uib-tab> -->
     </div>
 </div>
-{{ user }}
